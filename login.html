@@ -5,90 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Entrar — AEAFR</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/pages.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; background: var(--grey-bg); }
+    .auth-panel { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 32px; }
+    .auth-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; width: 100%; max-width: 400px; box-shadow: var(--shadow-md); }
+    .auth-brand { text-align: center; margin-bottom: 28px; }
+    .auth-brand .brand { display: block; font-size: 26px; font-weight: 800; color: var(--green-dark); margin-bottom: 4px; }
+    .auth-brand small { color: var(--text-light); font-size: 13px; }
+    .auth-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .auth-sub { font-size: 13px; color: var(--text-light); margin-bottom: 24px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; display: flex; justify-content: space-between; }
+    .form-group input { padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; outline: none; transition: border-color .18s; }
+    .form-group input:focus { border-color: var(--teal); }
+    .inp-wrap { position: relative; }
+    .inp-wrap input { width: 100%; padding-right: 40px; }
+    .toggle-pw { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 14px; color: #888; }
+    .form-check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-light); margin-bottom: 20px; cursor: pointer; }
+    .form-check input { accent-color: var(--teal); }
+    .btn-submit { width: 100%; padding: 12px; background: var(--teal); color: #fff; border: none; border-radius: var(--radius); font-weight: 700; font-size: 14px; cursor: pointer; transition: background .18s; }
+    .btn-submit:hover { background: var(--teal-dark); }
+    .btn-submit:disabled { opacity: .6; cursor: not-allowed; }
+    .form-link { color: var(--teal); font-weight: 600; }
+    .form-link-sm { font-size: 12px; color: var(--text-light); }
+    .form-link-sm:hover { color: var(--teal); }
+    .auth-footer { text-align: center; margin-top: 18px; font-size: 13px; color: var(--text-light); }
+    .auth-back { display: block; text-align: center; margin-top: 20px; font-size: 13px; color: var(--text-light); transition: color .18s; }
+    .auth-back:hover { color: var(--teal); }
+    .visual-panel { background: linear-gradient(160deg, #0e3d4d 0%, #1b6678 100%); display: flex; align-items: center; justify-content: center; padding: 60px 48px; position: sticky; top: 0; height: 100vh; }
+    .visual-content { max-width: 360px; color: #fff; }
+    .visual-icon { font-size: 52px; margin-bottom: 24px; }
+    .visual-content h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+    .visual-content p { color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.7; }
+    .visual-stats { display: flex; gap: 32px; margin-top: 36px; }
+    .vs { display: flex; flex-direction: column; gap: 3px; }
+    .vs strong { font-size: 28px; font-weight: 800; color: var(--green); }
+    .vs small { font-size: 12px; color: rgba(255,255,255,.5); }
+    @media (max-width: 800px) { body { grid-template-columns: 1fr; } .visual-panel { display: none; } }
+  </style>
 </head>
-<body class="auth-page">
+<body>
 
-  <div class="auth-container">
+  <div class="auth-panel">
     <div class="auth-brand">
-      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:8px">
-        <div class="logo-icon">🎓</div>
-        <div class="logo-text">
-          <span class="logo-main">AEAFR</span>
-          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
-        </div>
-      </a>
-      <p class="auth-brand-sub">O teu portal de oportunidades</p>
+      <a href="index.html" class="brand">PORTAL</a>
+      <small>Associação dos Estudantes Angolanos na Federação da Rússia</small>
     </div>
 
     <div class="auth-card">
       <h2 class="auth-title">Bem-vindo de volta</h2>
       <p class="auth-sub">Entra na tua conta para continuar</p>
 
-      <form class="auth-form" onsubmit="handleLogin(event)">
+      <form onsubmit="handleLogin(event)">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="o.teu@email.com" required autocomplete="email" />
+          <input type="email" id="email" placeholder="o.teu@email.com" required />
         </div>
         <div class="form-group">
-          <label for="password">
-            Palavra-passe
-            <a href="recuperar.html" class="form-link-right">Esqueceste?</a>
-          </label>
-          <div class="input-password">
-            <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password" />
-            <button type="button" class="toggle-pw" onclick="togglePw()">👁</button>
+          <label for="password">Palavra-passe <a href="#" class="form-link-sm">Esqueceste?</a></label>
+          <div class="inp-wrap">
+            <input type="password" id="password" placeholder="••••••••" required />
+            <button type="button" class="toggle-pw" onclick="document.getElementById('password').type = document.getElementById('password').type === 'password' ? 'text' : 'password'">👁</button>
           </div>
         </div>
-
-        <label class="form-check-label">
-          <input type="checkbox" id="rememberMe" />
-          Manter sessão iniciada
+        <label class="form-check">
+          <input type="checkbox" /> Manter sessão iniciada
         </label>
-
-        <button type="submit" class="btn-auth-submit">Entrar</button>
+        <button type="submit" class="btn-submit" id="btnLogin">Entrar</button>
       </form>
 
-      <div class="auth-divider"><span>ou</span></div>
-
-      <div class="auth-alt">
-        <p>Ainda não tens conta? <a href="register.html" class="form-link">Registar gratuitamente →</a></p>
+      <div class="auth-footer">
+        Ainda não tens conta? <a href="register.html" class="form-link">Registar gratuitamente</a>
       </div>
     </div>
 
     <a href="index.html" class="auth-back">← Voltar ao portal</a>
   </div>
 
-  <div class="auth-visual">
-    <div class="auth-visual-content">
-      <div class="auth-visual-icon">🎓</div>
-      <h3>Mais de 1 200 estudantes</h3>
-      <p>Conectados através da AEAFR a bolsas, estágios e oportunidades de carreira.</p>
-      <div class="auth-visual-stats">
-        <div class="av-stat"><span>83</span><small>Bolsas activas</small></div>
-        <div class="av-stat"><span>210</span><small>Estágios</small></div>
-        <div class="av-stat"><span>47</span><small>Parceiros</small></div>
+  <div class="visual-panel">
+    <div class="visual-content">
+      <div class="visual-icon">🎓</div>
+      <h3>Mais de 1 200 estudantes ligados</h3>
+      <p>Acede a bolsas, estágios, empregos e recursos de apoio exclusivos para estudantes angolanos na Rússia.</p>
+      <div class="visual-stats">
+        <div class="vs"><strong>83</strong><small>Bolsas activas</small></div>
+        <div class="vs"><strong>210</strong><small>Estágios</small></div>
+        <div class="vs"><strong>47</strong><small>Parceiros</small></div>
       </div>
     </div>
   </div>
 
-  <script src="js/main.js"></script>
   <script>
     function handleLogin(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.btn-auth-submit');
-      btn.textContent = 'A verificar...';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Entrar';
-        btn.disabled = false;
-        alert('Demo: autenticação não implementada neste protótipo.');
-      }, 1200);
-    }
-    function togglePw() {
-      const pw = document.getElementById('password');
-      pw.type = pw.type === 'password' ? 'text' : 'password';
+      const btn = document.getElementById('btnLogin');
+      btn.textContent = 'A verificar...'; btn.disabled = true;
+      setTimeout(() => { btn.textContent = 'Entrar'; btn.disabled = false; alert('Demo: autenticação não implementada neste protótipo.'); }, 1200);
     }
   </script>
 </body>

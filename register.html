@@ -5,54 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registar — AEAFR</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/pages.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; background: var(--grey-bg); }
+    .auth-panel { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 32px; }
+    .auth-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; width: 100%; max-width: 440px; box-shadow: var(--shadow-md); }
+    .auth-brand { text-align: center; margin-bottom: 28px; }
+    .auth-brand .brand { display: block; font-size: 26px; font-weight: 800; color: var(--green-dark); margin-bottom: 4px; }
+    .auth-brand small { color: var(--text-light); font-size: 13px; }
+    .auth-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .auth-sub { font-size: 13px; color: var(--text-light); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .form-group label { font-size: 13px; font-weight: 600; }
+    .form-group input, .form-group select { padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; outline: none; transition: border-color .18s; width: 100%; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--teal); }
+    .inp-wrap { position: relative; }
+    .inp-wrap input { padding-right: 40px; }
+    .toggle-pw { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 14px; color: #888; }
+    .form-check { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-light); margin-bottom: 20px; cursor: pointer; line-height: 1.5; }
+    .form-check input { accent-color: var(--teal); margin-top: 2px; flex-shrink: 0; }
+    .btn-submit { width: 100%; padding: 12px; background: var(--teal); color: #fff; border: none; border-radius: var(--radius); font-weight: 700; font-size: 14px; cursor: pointer; transition: background .18s; }
+    .btn-submit:hover { background: var(--teal-dark); }
+    .btn-submit:disabled { opacity: .6; cursor: not-allowed; }
+    .form-link { color: var(--teal); font-weight: 600; }
+    .auth-footer { text-align: center; margin-top: 18px; font-size: 13px; color: var(--text-light); }
+    .auth-back { display: block; text-align: center; margin-top: 20px; font-size: 13px; color: var(--text-light); transition: color .18s; }
+    .auth-back:hover { color: var(--teal); }
+    .visual-panel { background: linear-gradient(160deg, #0e3d4d 0%, #1b6678 100%); display: flex; align-items: center; justify-content: center; padding: 60px 48px; position: sticky; top: 0; height: 100vh; }
+    .visual-content { max-width: 360px; color: #fff; }
+    .visual-icon { font-size: 52px; margin-bottom: 24px; }
+    .visual-content h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+    .visual-content p { color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+    .benefits { display: flex; flex-direction: column; gap: 12px; }
+    .benefits li { font-size: 14px; color: rgba(255,255,255,.85); display: flex; gap: 10px; align-items: flex-start; }
+    @media (max-width: 800px) { body { grid-template-columns: 1fr; } .visual-panel { display: none; } .form-row { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body class="auth-page">
+<body>
 
-  <div class="auth-container">
+  <div class="auth-panel">
     <div class="auth-brand">
-      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:8px">
-        <div class="logo-icon">🎓</div>
-        <div class="logo-text">
-          <span class="logo-main">AEAFR</span>
-          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
-        </div>
-      </a>
-      <p class="auth-brand-sub">Junta-te à comunidade</p>
+      <a href="index.html" class="brand">PORTAL</a>
+      <small>Associação dos Estudantes Angolanos na Federação da Rússia</small>
     </div>
 
     <div class="auth-card">
       <h2 class="auth-title">Criar conta gratuita</h2>
       <p class="auth-sub">Acede a bolsas, estágios e serviços de apoio</p>
 
-      <form class="auth-form" onsubmit="handleRegister(event)">
+      <form onsubmit="handleRegister(event)">
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName">Nome</label>
-            <input type="text" id="firstName" placeholder="João" required />
+            <label>Nome</label>
+            <input type="text" placeholder="João" required />
           </div>
           <div class="form-group">
-            <label for="lastName">Apelido</label>
-            <input type="text" id="lastName" placeholder="Silva" required />
+            <label>Apelido</label>
+            <input type="text" placeholder="Silva" required />
           </div>
         </div>
 
         <div class="form-group">
-          <label for="regEmail">Email</label>
-          <input type="email" id="regEmail" placeholder="o.teu@email.com" required />
+          <label>Email</label>
+          <input type="email" placeholder="o.teu@email.com" required />
         </div>
 
         <div class="form-group">
-          <label for="university">Universidade</label>
-          <select id="university" required>
+          <label>Universidade</label>
+          <select required>
             <option value="">Selecciona a tua universidade</option>
             <option>MGTU N.E. Bauman — Moscovo</option>
             <option>MGU Lomonosov — Moscovo</option>
             <option>RUDN — Moscovo</option>
             <option>SPbGU — São Petersburgo</option>
             <option>KFU — Cazã</option>
-            <option>SPBPU — São Petersburgo</option>
             <option>UrFU — Ecaterimburgo</option>
             <option>NSU — Novosibirsk</option>
             <option>Outra</option>
@@ -61,18 +88,17 @@
 
         <div class="form-row">
           <div class="form-group">
-            <label for="level">Nível Académico</label>
-            <select id="level" required>
+            <label>Nível Académico</label>
+            <select required>
               <option value="">Selecciona</option>
               <option>Licenciatura</option>
               <option>Mestrado</option>
               <option>Doutoramento</option>
-              <option>Pós-Doutoramento</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="year">Ano Curricular</label>
-            <select id="year">
+            <label>Ano Curricular</label>
+            <select>
               <option value="">Selecciona</option>
               <option>1.º Ano</option>
               <option>2.º Ano</option>
@@ -85,35 +111,35 @@
         </div>
 
         <div class="form-group">
-          <label for="regPassword">Palavra-passe</label>
-          <div class="input-password">
-            <input type="password" id="regPassword" placeholder="Mínimo 8 caracteres" required minlength="8" />
-            <button type="button" class="toggle-pw" onclick="togglePwReg()">👁</button>
+          <label>Palavra-passe</label>
+          <div class="inp-wrap">
+            <input type="password" id="regPw" placeholder="Mínimo 8 caracteres" required minlength="8" />
+            <button type="button" class="toggle-pw" onclick="var p=document.getElementById('regPw');p.type=p.type==='password'?'text':'password'">👁</button>
           </div>
         </div>
 
-        <label class="form-check-label">
+        <label class="form-check">
           <input type="checkbox" required />
-          Concordo com os <a href="termos.html" class="form-link">Termos de Uso</a> e a <a href="privacidade.html" class="form-link">Política de Privacidade</a>
+          Concordo com os <a href="#" class="form-link">Termos de Uso</a> e a <a href="#" class="form-link">Política de Privacidade</a>
         </label>
 
-        <button type="submit" class="btn-auth-submit">Criar Conta Gratuita</button>
+        <button type="submit" class="btn-submit" id="btnReg">Criar Conta Gratuita</button>
       </form>
 
-      <div class="auth-alt">
-        <p>Já tens conta? <a href="login.html" class="form-link">Entrar →</a></p>
+      <div class="auth-footer">
+        Já tens conta? <a href="login.html" class="form-link">Entrar</a>
       </div>
     </div>
 
     <a href="index.html" class="auth-back">← Voltar ao portal</a>
   </div>
 
-  <div class="auth-visual">
-    <div class="auth-visual-content">
-      <div class="auth-visual-icon">🚀</div>
+  <div class="visual-panel">
+    <div class="visual-content">
+      <div class="visual-icon">🚀</div>
       <h3>Começa hoje o teu percurso</h3>
-      <p>Regista-te gratuitamente e acede a centenas de oportunidades exclusivas para estudantes angolanos.</p>
-      <ul class="auth-benefits">
+      <p>Regista-te gratuitamente e acede a centenas de oportunidades exclusivas para estudantes angolanos na Rússia.</p>
+      <ul class="benefits">
         <li>✓ Candidatura directa a bolsas e estágios</li>
         <li>✓ Alertas personalizados de oportunidades</li>
         <li>✓ Apoio jurídico e consular gratuito</li>
@@ -123,22 +149,12 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
   <script>
     function handleRegister(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.btn-auth-submit');
-      btn.textContent = 'A criar conta...';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Criar Conta Gratuita';
-        btn.disabled = false;
-        alert('Demo: registo não implementado neste protótipo.');
-      }, 1400);
-    }
-    function togglePwReg() {
-      const pw = document.getElementById('regPassword');
-      pw.type = pw.type === 'password' ? 'text' : 'password';
+      const btn = document.getElementById('btnReg');
+      btn.textContent = 'A criar conta...'; btn.disabled = true;
+      setTimeout(() => { btn.textContent = 'Criar Conta Gratuita'; btn.disabled = false; alert('Demo: registo não implementado neste protótipo.'); }, 1400);
     }
   </script>
 </body>

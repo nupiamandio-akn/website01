@@ -4,645 +4,575 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AEAFR — Associação dos Estudantes Angolanos na Federação da Rússia</title>
-  <meta name="description" content="Portal oficial da Associação dos Estudantes Angolanos na Federação da Rússia. Bolsas, estágios, notícias e apoio aos estudantes." />
+  <meta name="description" content="Portal oficial da AEAFR. Bolsas, estágios, carreira e apoio para estudantes angolanos na Rússia." />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- TOP BAR -->
+  <!-- ===== TOPBAR PRETA ===== -->
   <div class="topbar">
-    <div class="container topbar-inner">
-      <span>🇦🇴 Portal Oficial da AEAFR &nbsp;|&nbsp; Moscovo, Federação da Rússia</span>
-      <div class="topbar-links">
-        <a href="#contacto">Contacto</a>
-        <a href="#faq">FAQ</a>
-        <a href="login.html" class="btn-topbar">Entrar</a>
-        <a href="register.html" class="btn-topbar btn-topbar-accent">Registar</a>
-      </div>
+    <div class="topbar-left">
+      <span class="topbar-menu">MENU</span>
+      <span class="topbar-sep">|</span>
+      <a href="#">MAIL</a>
+      <a href="#">NOTÍCIAS</a>
+    </div>
+    <div class="topbar-center">
+      <a href="index.html" class="topbar-logo">
+        <div class="topbar-logo-icon">🎓</div>
+        <span class="topbar-logo-text">AEAFR</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" title="Notificações">🔔</a>
+      <a href="login.html" title="Conta">👤</a>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">🎓</div>
-        <div class="logo-text">
-          <span class="logo-main">AEAFR</span>
-          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
-        </div>
-      </a>
+  <!-- ===== HEADER BRANCO ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">PORTAL</a>
 
-      <nav class="nav">
-        <a href="#oportunidades" class="nav-link">Oportunidades</a>
-        <a href="#bolsas" class="nav-link">Bolsas</a>
-        <a href="#estagios" class="nav-link">Estágios</a>
-        <a href="#noticias" class="nav-link">Notícias</a>
-        <a href="#eventos" class="nav-link">Eventos</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item active">BOLSAS</a>
+        <a href="estagios.html" class="nav-item bordered">ESTÁGIOS</a>
+        <a href="carreira.html" class="nav-item">CARREIRA</a>
+        <a href="login.html" class="nav-item nav-cta">
+          ESTUDANTES
+          <small>Guardar CV, Área Pessoal</small>
+        </a>
+        <a href="publicar.html" class="nav-item nav-cta nav-cta-alt">
+          INSTITUIÇÕES
+          <small>Publicar Anúncio Grátis</small>
+        </a>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </button>
     </div>
 
     <nav class="mobile-nav" id="mobileNav">
-      <a href="#oportunidades">Oportunidades</a>
-      <a href="#bolsas">Bolsas</a>
-      <a href="#estagios">Estágios</a>
-      <a href="#noticias">Notícias</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#sobre">Sobre</a>
+      <a href="index.html">Bolsas</a>
+      <a href="estagios.html">Estágios</a>
+      <a href="carreira.html">Carreira</a>
+      <a href="login.html">Estudantes</a>
+      <a href="publicar.html">Instituições</a>
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- ===== HERO TEAL ===== -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <h1 class="hero-title">Encontra oportunidades para o teu <span class="highlight">futuro em Angola</span></h1>
-      <p class="hero-subtitle">Bolsas, estágios, empregos e recursos para estudantes angolanos na Federação da Rússia.</p>
+    <div class="hero-inner">
+      <h1 class="hero-title">Encontre a oportunidade certa</h1>
+      <p class="hero-sub">1 240 oportunidades à sua espera!</p>
 
-      <div class="search-box">
-        <div class="search-tabs">
-          <button class="tab active" data-tab="oportunidades">Oportunidades</button>
-          <button class="tab" data-tab="empresas">Empresas / Instituições</button>
-          <button class="tab" data-tab="estudantes">Estudantes</button>
+      <div class="search-bar">
+        <div class="search-field search-keyword">
+          <input type="text" id="searchKeyword" placeholder="Palavra-chave, Área, Bolsa ou Localidade" />
         </div>
-        <div class="search-form">
-          <div class="search-field">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" placeholder="Pesquisa: bolsa, estágio, emprego, área..." />
+        <div class="search-field search-select">
+          <select id="searchArea">
+            <option value="">Área de Estudo</option>
+            <option>Engenharia &amp; Tecnologia</option>
+            <option>Medicina &amp; Saúde</option>
+            <option>Ciências Naturais</option>
+            <option>Economia &amp; Negócios</option>
+            <option>Ciências Sociais &amp; Direito</option>
+            <option>Artes &amp; Humanidades</option>
+            <option>Arquitectura</option>
+            <option>Agronomia</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+        <div class="search-field search-select">
+          <select id="searchType">
+            <option value="">Tipo de Oportunidade</option>
+            <option>Bolsa de Estudo</option>
+            <option>Estágio</option>
+            <option>Emprego</option>
+            <option>Curso / Formação</option>
+            <option>Alojamento</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+        <button class="btn-search" onclick="doSearch()">PROCURAR</button>
+      </div>
+
+      <div class="hero-tags">
+        <span class="tag-label">Sugestões:</span>
+        <a href="#" class="hero-tag">Bolsa Total</a>
+        <a href="#" class="hero-tag">Engenharia</a>
+        <a href="#" class="hero-tag">Medicina</a>
+        <a href="#" class="hero-tag">Moscovo</a>
+        <a href="#" class="hero-tag">Estágio Remunerado</a>
+        <a href="#" class="hero-tag">PhD</a>
+        <a href="#" class="hero-tag">Remoto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORPO PRINCIPAL ===== -->
+  <main class="main-content">
+    <div class="content-wrap">
+
+      <!-- SIDEBAR FILTROS -->
+      <aside class="sidebar">
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Filtrar Resultados</h3>
+
+          <div class="filter-group">
+            <h4 class="filter-heading">Tipo de Oportunidade</h4>
+            <label class="fcheck"><input type="checkbox" checked /> Bolsas de Estudo <span class="fcount">(83)</span></label>
+            <label class="fcheck"><input type="checkbox" /> Estágios <span class="fcount">(210)</span></label>
+            <label class="fcheck"><input type="checkbox" /> Empregos <span class="fcount">(145)</span></label>
+            <label class="fcheck"><input type="checkbox" /> Cursos <span class="fcount">(34)</span></label>
           </div>
-          <div class="search-field search-location">
-            <span class="search-icon">📍</span>
-            <select id="searchLocation">
-              <option value="">Cidade / Região</option>
-              <option>Moscovo</option>
-              <option>São Petersburgo</option>
-              <option>Novosibirsk</option>
-              <option>Ecaterimburgo</option>
-              <option>Cazã</option>
-              <option>Nizhny Novgorod</option>
-              <option>Toda a Rússia</option>
+
+          <div class="filter-group">
+            <h4 class="filter-heading">Nível Académico</h4>
+            <label class="fcheck"><input type="checkbox" /> Licenciatura</label>
+            <label class="fcheck"><input type="checkbox" /> Mestrado</label>
+            <label class="fcheck"><input type="checkbox" /> Doutoramento</label>
+            <label class="fcheck"><input type="checkbox" /> Pós-Doutoramento</label>
+          </div>
+
+          <div class="filter-group">
+            <h4 class="filter-heading">Cidade</h4>
+            <label class="fcheck"><input type="checkbox" /> Moscovo</label>
+            <label class="fcheck"><input type="checkbox" /> São Petersburgo</label>
+            <label class="fcheck"><input type="checkbox" /> Cazã</label>
+            <label class="fcheck"><input type="checkbox" /> Novosibirsk</label>
+            <label class="fcheck"><input type="checkbox" /> Ecaterimburgo</label>
+          </div>
+
+          <div class="filter-group">
+            <h4 class="filter-heading">Financiamento</h4>
+            <label class="fcheck"><input type="checkbox" /> Bolsa Total</label>
+            <label class="fcheck"><input type="checkbox" /> Bolsa Parcial</label>
+            <label class="fcheck"><input type="checkbox" /> Remunerado</label>
+            <label class="fcheck"><input type="checkbox" /> Voluntário</label>
+          </div>
+
+          <div class="filter-group">
+            <h4 class="filter-heading">Entidade</h4>
+            <label class="fcheck"><input type="checkbox" /> Governo Angolano</label>
+            <label class="fcheck"><input type="checkbox" /> Governo Russo</label>
+            <label class="fcheck"><input type="checkbox" /> Universidades</label>
+            <label class="fcheck"><input type="checkbox" /> Empresas</label>
+          </div>
+
+          <button class="btn-filter">Aplicar Filtros</button>
+        </div>
+
+        <!-- Banner lateral -->
+        <div class="sidebar-banner">
+          <p>Regista o teu <strong>CV</strong> e recebe alertas de oportunidades</p>
+          <a href="register.html" class="btn-banner">Criar Conta Grátis</a>
+        </div>
+
+      </aside>
+
+      <!-- LISTAGEM PRINCIPAL -->
+      <section class="listings">
+
+        <div class="listings-header">
+          <div class="listings-info">
+            <span class="listings-count">A mostrar <strong>83</strong> bolsas</span>
+            <div class="view-tabs">
+              <button class="view-tab active" title="Lista">☰</button>
+              <button class="view-tab" title="Grelha">⊞</button>
+            </div>
+          </div>
+          <div class="listings-sort">
+            <label>Ordenar por:</label>
+            <select>
+              <option>Mais recentes</option>
+              <option>Prazo mais próximo</option>
+              <option>Relevância</option>
             </select>
           </div>
-          <button class="btn-search" onclick="doSearch()">Pesquisar</button>
         </div>
-      </div>
 
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num" data-target="1240">0</span><span class="stat-label">Estudantes Registados</span></div>
-        <div class="stat"><span class="stat-num" data-target="83">0</span><span class="stat-label">Bolsas Activas</span></div>
-        <div class="stat"><span class="stat-num" data-target="210">0</span><span class="stat-label">Estágios Disponíveis</span></div>
-        <div class="stat"><span class="stat-num" data-target="47">0</span><span class="stat-label">Parceiros</span></div>
-      </div>
-    </div>
-  </section>
+        <!-- DESTAQUE -->
+        <div class="listings-section-title">Em Destaque</div>
 
-  <!-- CATEGORIAS -->
-  <section class="categorias" id="oportunidades">
-    <div class="container">
-      <h2 class="section-title">Explora por Categoria</h2>
-      <p class="section-sub">Tudo o que precisas como estudante angolano na Rússia, num só portal.</p>
-      <div class="cat-grid">
-        <a href="bolsas.html" class="cat-card" style="--c:#cc0000">
-          <div class="cat-icon">🎓</div>
-          <div class="cat-name">Bolsas de Estudo</div>
-          <div class="cat-count">83 disponíveis</div>
-        </a>
-        <a href="estagios.html" class="cat-card" style="--c:#e67e00">
-          <div class="cat-icon">💼</div>
-          <div class="cat-name">Estágios</div>
-          <div class="cat-count">210 disponíveis</div>
-        </a>
-        <a href="empregos.html" class="cat-card" style="--c:#1a7a3a">
-          <div class="cat-icon">🏢</div>
-          <div class="cat-name">Empregos</div>
-          <div class="cat-count">145 disponíveis</div>
-        </a>
-        <a href="alojamento.html" class="cat-card" style="--c:#1565c0">
-          <div class="cat-icon">🏠</div>
-          <div class="cat-name">Alojamento</div>
-          <div class="cat-count">56 listagens</div>
-        </a>
-        <a href="cursos.html" class="cat-card" style="--c:#6a1b9a">
-          <div class="cat-icon">📚</div>
-          <div class="cat-name">Cursos & Formação</div>
-          <div class="cat-count">34 cursos</div>
-        </a>
-        <a href="servicos.html" class="cat-card" style="--c:#00838f">
-          <div class="cat-icon">🛡️</div>
-          <div class="cat-name">Apoio Jurídico</div>
-          <div class="cat-count">Serviço gratuito</div>
-        </a>
-        <a href="saude.html" class="cat-card" style="--c:#d32f2f">
-          <div class="cat-icon">🏥</div>
-          <div class="cat-name">Saúde & Seguro</div>
-          <div class="cat-count">Guias e apoio</div>
-        </a>
-        <a href="eventos.html" class="cat-card" style="--c:#f57c00">
-          <div class="cat-icon">🎉</div>
-          <div class="cat-name">Eventos & Cultura</div>
-          <div class="cat-count">12 eventos</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPORTUNIDADES EM DESTAQUE -->
-  <section class="oport-section" id="bolsas">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Bolsas em Destaque</h2>
-          <p class="section-sub">Oportunidades seleccionadas para estudantes angolanos.</p>
-        </div>
-        <a href="bolsas.html" class="btn-outline">Ver todas as bolsas →</a>
-      </div>
-
-      <div class="oport-grid" id="bolsasGrid">
-
-        <article class="oport-card">
-          <div class="oport-card-header">
-            <div class="oport-logo" style="background:#cc0000">BES</div>
-            <div class="oport-badge destaque">Destaque</div>
-          </div>
-          <h3 class="oport-title">Bolsa de Excelência — Engenharia e Tecnologia</h3>
-          <p class="oport-org">Instituto Estatal de Moscovo (MGTU)</p>
-          <div class="oport-tags">
-            <span class="tag">Engenharia</span>
-            <span class="tag">Mestrado</span>
-            <span class="tag">Moscovo</span>
-          </div>
-          <div class="oport-footer">
-            <span class="oport-date">Candidatura até 30 Mai 2026</span>
-            <a href="#" class="btn-card">Ver detalhes</a>
-          </div>
-        </article>
-
-        <article class="oport-card">
-          <div class="oport-card-header">
-            <div class="oport-logo" style="background:#1a7a3a">BMA</div>
-            <div class="oport-badge nova">Nova</div>
-          </div>
-          <h3 class="oport-title">Bolsa do Ministério Angolano da Educação — 2026/27</h3>
-          <p class="oport-org">Embaixada de Angola em Moscovo</p>
-          <div class="oport-tags">
-            <span class="tag">Licenciatura</span>
-            <span class="tag">Mestrado</span>
-            <span class="tag">PhD</span>
-          </div>
-          <div class="oport-footer">
-            <span class="oport-date">Candidatura até 15 Jun 2026</span>
-            <a href="#" class="btn-card">Ver detalhes</a>
-          </div>
-        </article>
-
-        <article class="oport-card">
-          <div class="oport-card-header">
-            <div class="oport-logo" style="background:#1565c0">RSF</div>
-            <div class="oport-badge"></div>
-          </div>
-          <h3 class="oport-title">Bolsa do Governo Russo para Estudantes Africanos</h3>
-          <p class="oport-org">Rosotrudnichestvo — Agência Federal Russa</p>
-          <div class="oport-tags">
-            <span class="tag">Todos os níveis</span>
-            <span class="tag">Todas as cidades</span>
-          </div>
-          <div class="oport-footer">
-            <span class="oport-date">Candidatura até 01 Jul 2026</span>
-            <a href="#" class="btn-card">Ver detalhes</a>
-          </div>
-        </article>
-
-        <article class="oport-card">
-          <div class="oport-card-header">
-            <div class="oport-logo" style="background:#6a1b9a">SPB</div>
-            <div class="oport-badge urgente">Urgente</div>
-          </div>
-          <h3 class="oport-title">Bolsa de Investigação — Universidade de São Petersburgo</h3>
-          <p class="oport-org">SPbGU — Faculdade de Ciências</p>
-          <div class="oport-tags">
-            <span class="tag">PhD</span>
-            <span class="tag">Investigação</span>
-            <span class="tag">São Petersburgo</span>
-          </div>
-          <div class="oport-footer">
-            <span class="oport-date">Candidatura até 10 Mai 2026</span>
-            <a href="#" class="btn-card">Ver detalhes</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ESTÁGIOS -->
-  <section class="oport-section oport-light" id="estagios">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Estágios em Destaque</h2>
-          <p class="section-sub">Experiência profissional para construir o teu currículo.</p>
-        </div>
-        <a href="estagios.html" class="btn-outline">Ver todos os estágios →</a>
-      </div>
-
-      <div class="estagios-list">
-
-        <article class="estagio-card">
-          <div class="estagio-logo" style="background:#e67e00">GA</div>
-          <div class="estagio-info">
-            <h3><a href="#">Estágio em Gestão de Projectos — Sector Petrolífero</a></h3>
-            <p class="estagio-org">Gazprom Angola Partnership &nbsp;·&nbsp; Moscovo</p>
-            <div class="oport-tags">
-              <span class="tag">Engenharia Petrolífera</span>
-              <span class="tag">Remunerado</span>
-              <span class="tag">6 meses</span>
+        <article class="listing-card listing-featured">
+          <div class="listing-logo" style="background:#cc0000">BES</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-badge badge-destaque">Destaque</span>
+              <span class="listing-date">há 1 dia</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa de Excelência — Engenharia e Tecnologia</a></h2>
+            <p class="listing-org">MGTU N.E. Bauman &nbsp;·&nbsp; Moscovo</p>
+            <p class="listing-desc">Bolsa completa para estudantes angolanos no Mestrado em Engenharia. Cobre propinas, alojamento e subsídio mensal de 25 000 ₽.</p>
+            <div class="listing-tags">
+              <span class="ltag">Mestrado</span>
+              <span class="ltag">Engenharia</span>
+              <span class="ltag">Bolsa Total</span>
+              <span class="ltag">Moscovo</span>
             </div>
           </div>
-          <div class="estagio-meta">
-            <span class="estagio-salario">50 000 ₽ / mês</span>
-            <span class="estagio-data">há 2 dias</span>
-            <a href="#" class="btn-card">Candidatar</a>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar" title="Guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 30 Mai 2026</span>
           </div>
         </article>
 
-        <article class="estagio-card">
-          <div class="estagio-logo" style="background:#1a7a3a">SB</div>
-          <div class="estagio-info">
-            <h3><a href="#">Estágio em Tecnologia Financeira — Sberbank</a></h3>
-            <p class="estagio-org">Sberbank &nbsp;·&nbsp; Moscovo</p>
-            <div class="oport-tags">
-              <span class="tag">Finanças</span>
-              <span class="tag">TI</span>
-              <span class="tag">Remunerado</span>
+        <article class="listing-card listing-featured">
+          <div class="listing-logo" style="background:#1a7a3a">BMA</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-badge badge-nova">Nova</span>
+              <span class="listing-date">há 2 dias</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Programa Nacional de Bolsas Angola–Rússia 2026/27</a></h2>
+            <p class="listing-org">Embaixada de Angola em Moscovo &nbsp;·&nbsp; Toda a Rússia</p>
+            <p class="listing-desc">O Ministério do Ensino Superior de Angola abre 500 novas vagas para universidades russas de prestígio no ano lectivo 2026/27.</p>
+            <div class="listing-tags">
+              <span class="ltag">Licenciatura</span>
+              <span class="ltag">Mestrado</span>
+              <span class="ltag">PhD</span>
+              <span class="ltag">Bolsa Total</span>
             </div>
           </div>
-          <div class="estagio-meta">
-            <span class="estagio-salario">45 000 ₽ / mês</span>
-            <span class="estagio-data">há 3 dias</span>
-            <a href="#" class="btn-card">Candidatar</a>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar" title="Guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 15 Jun 2026</span>
           </div>
         </article>
 
-        <article class="estagio-card">
-          <div class="estagio-logo" style="background:#1565c0">SK</div>
-          <div class="estagio-info">
-            <h3><a href="#">Estágio em Inovação e Startups — Skolkovo</a></h3>
-            <p class="estagio-org">Skolkovo Innovation Center &nbsp;·&nbsp; Moscovo</p>
-            <div class="oport-tags">
-              <span class="tag">Tecnologia</span>
-              <span class="tag">Empreendedorismo</span>
-              <span class="tag">3 meses</span>
+        <!-- MAIS RECENTES -->
+        <div class="listings-section-title">Mais Recentes</div>
+
+        <article class="listing-card">
+          <div class="listing-logo" style="background:#1565c0">RSF</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-date">há 3 dias</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa do Governo Federal Russo para Estudantes Africanos</a></h2>
+            <p class="listing-org">Rosotrudnichestvo &nbsp;·&nbsp; Toda a Rússia</p>
+            <div class="listing-tags">
+              <span class="ltag">Todos os níveis</span>
+              <span class="ltag">Todas as áreas</span>
+              <span class="ltag">Propinas + Subsídio</span>
             </div>
           </div>
-          <div class="estagio-meta">
-            <span class="estagio-salario">60 000 ₽ / mês</span>
-            <span class="estagio-data">há 5 dias</span>
-            <a href="#" class="btn-card">Candidatar</a>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 1 Jul 2026</span>
           </div>
         </article>
 
-        <article class="estagio-card">
-          <div class="estagio-logo" style="background:#d32f2f">MC</div>
-          <div class="estagio-info">
-            <h3><a href="#">Estágio em Medicina — Hospital Central de São Petersburgo</a></h3>
-            <p class="estagio-org">SPb Clínica Estatal &nbsp;·&nbsp; São Petersburgo</p>
-            <div class="oport-tags">
-              <span class="tag">Medicina</span>
-              <span class="tag">Clínico</span>
-              <span class="tag">12 meses</span>
+        <article class="listing-card">
+          <div class="listing-logo" style="background:#6a1b9a">SPB</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-badge badge-urgente">Urgente</span>
+              <span class="listing-date">há 4 dias</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa de Investigação — Universidade de São Petersburgo</a></h2>
+            <p class="listing-org">SPbGU &nbsp;·&nbsp; São Petersburgo</p>
+            <div class="listing-tags">
+              <span class="ltag">PhD</span>
+              <span class="ltag">Investigação</span>
+              <span class="ltag">São Petersburgo</span>
             </div>
           </div>
-          <div class="estagio-meta">
-            <span class="estagio-salario">35 000 ₽ / mês</span>
-            <span class="estagio-data">há 1 semana</span>
-            <a href="#" class="btn-card">Candidatar</a>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 10 Mai 2026</span>
           </div>
         </article>
 
-      </div>
-    </div>
-  </section>
+        <article class="listing-card">
+          <div class="listing-logo" style="background:#e67e00">KFU</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-date">há 5 dias</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa de Medicina — Universidade Federal de Cazã</a></h2>
+            <p class="listing-org">KFU &nbsp;·&nbsp; Cazã</p>
+            <div class="listing-tags">
+              <span class="ltag">Mestrado</span>
+              <span class="ltag">Medicina</span>
+              <span class="ltag">Bolsa Parcial</span>
+            </div>
+          </div>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 20 Jun 2026</span>
+          </div>
+        </article>
 
-  <!-- BANNER CTA -->
-  <section class="cta-banner">
-    <div class="container cta-inner">
-      <div class="cta-text">
-        <h2>És uma empresa ou instituição?</h2>
-        <p>Publica as tuas vagas, bolsas e estágios e chega a mais de 1 200 estudantes angolanos qualificados na Rússia.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="publicar.html" class="btn-cta-primary">Publicar Oportunidade</a>
-        <a href="parceiros.html" class="btn-cta-secondary">Tornar-se Parceiro</a>
-      </div>
-    </div>
-  </section>
+        <article class="listing-card">
+          <div class="listing-logo" style="background:#00838f">NSU</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-date">há 6 dias</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa de Ciências — Universidade de Novosibirsk</a></h2>
+            <p class="listing-org">NSU &nbsp;·&nbsp; Novosibirsk</p>
+            <div class="listing-tags">
+              <span class="ltag">Licenciatura</span>
+              <span class="ltag">Ciências</span>
+              <span class="ltag">Subsídio Mensal</span>
+            </div>
+          </div>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 5 Jul 2026</span>
+          </div>
+        </article>
 
-  <!-- NOTÍCIAS -->
-  <section class="noticias-section" id="noticias">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Últimas Notícias</h2>
-          <p class="section-sub">Informação relevante para a comunidade angolana na Rússia.</p>
+        <article class="listing-card">
+          <div class="listing-logo" style="background:#d32f2f">RUDN</div>
+          <div class="listing-body">
+            <div class="listing-meta-top">
+              <span class="listing-date">há 1 semana</span>
+            </div>
+            <h2 class="listing-title"><a href="#">Bolsa RUDN — Relações Internacionais e Direito</a></h2>
+            <p class="listing-org">RUDN University &nbsp;·&nbsp; Moscovo</p>
+            <div class="listing-tags">
+              <span class="ltag">Licenciatura</span>
+              <span class="ltag">Direito</span>
+              <span class="ltag">Relações Internacionais</span>
+            </div>
+          </div>
+          <div class="listing-actions">
+            <a href="#" class="btn-candidatar">Candidatar</a>
+            <button class="btn-guardar">🔖 Guardar</button>
+            <span class="listing-deadline">Até 30 Jun 2026</span>
+          </div>
+        </article>
+
+        <!-- PAGINAÇÃO -->
+        <div class="pagination">
+          <button class="pag-btn active">1</button>
+          <button class="pag-btn">2</button>
+          <button class="pag-btn">3</button>
+          <span class="pag-ellipsis">…</span>
+          <button class="pag-btn">9</button>
+          <button class="pag-btn pag-next">Seguinte »</button>
         </div>
-        <a href="noticias.html" class="btn-outline">Ver todas →</a>
-      </div>
 
-      <div class="noticias-grid">
-
-        <article class="noticia-card noticia-destaque">
-          <div class="noticia-img" style="background:linear-gradient(135deg,#cc0000,#000)">
-            <div class="noticia-img-content">🎓</div>
-          </div>
-          <div class="noticia-body">
-            <span class="noticia-categoria">Bolsas</span>
-            <h3><a href="#">Governo angolano abre 500 novas vagas de bolsas para 2026/27 na Rússia</a></h3>
-            <p>O Ministério do Ensino Superior de Angola anuncia o alargamento do programa de bolsas para universidades russas, com foco em engenharia, medicina e tecnologia.</p>
-            <div class="noticia-meta">
-              <span>📅 24 Abr 2026</span>
-              <span>✍️ Redacção AEAFR</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="noticia-card">
-          <div class="noticia-img-small" style="background:linear-gradient(135deg,#1565c0,#0d47a1)">🏛️</div>
-          <div class="noticia-body">
-            <span class="noticia-categoria">Diplomacia</span>
-            <h3><a href="#">Embaixada de Angola em Moscovo lança novo serviço de apoio consular online</a></h3>
-            <div class="noticia-meta"><span>📅 20 Abr 2026</span></div>
-          </div>
-        </article>
-
-        <article class="noticia-card">
-          <div class="noticia-img-small" style="background:linear-gradient(135deg,#1a7a3a,#0a5928)">💼</div>
-          <div class="noticia-body">
-            <span class="noticia-categoria">Carreira</span>
-            <h3><a href="#">Feira de Emprego Angola-Rússia 2026 recebe inscrições até Maio</a></h3>
-            <div class="noticia-meta"><span>📅 18 Abr 2026</span></div>
-          </div>
-        </article>
-
-        <article class="noticia-card">
-          <div class="noticia-img-small" style="background:linear-gradient(135deg,#6a1b9a,#4a0072)">📚</div>
-          <div class="noticia-body">
-            <span class="noticia-categoria">Educação</span>
-            <h3><a href="#">Nova plataforma de tradução russo-português lançada pela AEAFR</a></h3>
-            <div class="noticia-meta"><span>📅 15 Abr 2026</span></div>
-          </div>
-        </article>
-
-        <article class="noticia-card">
-          <div class="noticia-img-small" style="background:linear-gradient(135deg,#e67e00,#b85e00)">🌍</div>
-          <div class="noticia-body">
-            <span class="noticia-categoria">Cultura</span>
-            <h3><a href="#">Semana da Cultura Angolana em Moscovo celebra 30 anos de cooperação</a></h3>
-            <div class="noticia-meta"><span>📅 12 Abr 2026</span></div>
-          </div>
-        </article>
-
-      </div>
+      </section>
     </div>
-  </section>
 
-  <!-- EVENTOS -->
-  <section class="eventos-section" id="eventos">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Próximos Eventos</h2>
-          <p class="section-sub">Participa e conecta-te com a comunidade.</p>
-        </div>
-        <a href="eventos.html" class="btn-outline">Ver todos os eventos →</a>
-      </div>
-
-      <div class="eventos-grid">
-
-        <article class="evento-card">
-          <div class="evento-data">
-            <span class="evento-dia">03</span>
-            <span class="evento-mes">MAI</span>
-          </div>
-          <div class="evento-info">
-            <h3>Assembleia Geral da AEAFR 2026</h3>
-            <p>Eleições para os novos órgãos directivos da associação. Participação obrigatória para todos os membros.</p>
-            <div class="evento-meta">
-              <span>📍 Centro Cultural Angolano, Moscovo</span>
-              <span>🕐 14h00</span>
-              <span class="evento-tag tag-oficial">Oficial</span>
-            </div>
-          </div>
-          <a href="#" class="btn-card">Inscrever</a>
-        </article>
-
-        <article class="evento-card">
-          <div class="evento-data" style="--ec:#e67e00">
-            <span class="evento-dia">10</span>
-            <span class="evento-mes">MAI</span>
-          </div>
-          <div class="evento-info">
-            <h3>Feira de Emprego & Estágios Angola-Rússia 2026</h3>
-            <p>Encontro com mais de 40 empresas angolanas e russas a recrutar estudantes angolanos formados na Rússia.</p>
-            <div class="evento-meta">
-              <span>📍 Expocentre, Moscovo</span>
-              <span>🕐 10h00 – 18h00</span>
-              <span class="evento-tag tag-emprego">Emprego</span>
-            </div>
-          </div>
-          <a href="#" class="btn-card">Inscrever</a>
-        </article>
-
-        <article class="evento-card">
-          <div class="evento-data" style="--ec:#1a7a3a">
-            <span class="evento-dia">17</span>
-            <span class="evento-mes">MAI</span>
-          </div>
-          <div class="evento-info">
-            <h3>Workshop: Como Preparar a Tua Candidatura a Bolsas</h3>
-            <p>Sessão prática sobre como escrever cartas de motivação e CV para candidaturas a bolsas de estudo.</p>
-            <div class="evento-meta">
-              <span>📍 Online (Zoom)</span>
-              <span>🕐 18h00</span>
-              <span class="evento-tag tag-formacao">Formação</span>
-            </div>
-          </div>
-          <a href="#" class="btn-card">Inscrever</a>
-        </article>
-
-        <article class="evento-card">
-          <div class="evento-data" style="--ec:#cc0000">
-            <span class="evento-dia">25</span>
-            <span class="evento-mes">MAI</span>
-          </div>
-          <div class="evento-info">
-            <h3>Noite Cultural Angolana — Kizomba & Gastronomia</h3>
-            <p>Uma noite de convívio com música, dança e gastronomia angolana. Todos os estudantes são bem-vindos.</p>
-            <div class="evento-meta">
-              <span>📍 Clube Estudantil MGTU, Moscovo</span>
-              <span>🕐 19h00</span>
-              <span class="evento-tag tag-cultura">Cultura</span>
-            </div>
-          </div>
-          <a href="#" class="btn-card">Inscrever</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PARCEIROS -->
-  <section class="parceiros-section">
-    <div class="container">
-      <h2 class="section-title text-center">Os Nossos Parceiros</h2>
-      <p class="section-sub text-center">Instituições e empresas que apoiam os estudantes angolanos.</p>
-      <div class="parceiros-grid">
-        <div class="parceiro"><span>🏛️</span><span>Embaixada de Angola em Moscovo</span></div>
-        <div class="parceiro"><span>🎓</span><span>MGTU Bauman</span></div>
-        <div class="parceiro"><span>🎓</span><span>MGU — Universidade Lomonosov</span></div>
-        <div class="parceiro"><span>🏢</span><span>Gazprom</span></div>
-        <div class="parceiro"><span>🏦</span><span>Sberbank</span></div>
-        <div class="parceiro"><span>🚀</span><span>Skolkovo</span></div>
-        <div class="parceiro"><span>✈️</span><span>Aeroflot</span></div>
-        <div class="parceiro"><span>🏥</span><span>RUDN University</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="sobre-section" id="sobre">
-    <div class="container sobre-inner">
-      <div class="sobre-text">
-        <h2 class="section-title">Sobre a AEAFR</h2>
-        <p>A <strong>Associação dos Estudantes Angolanos na Federação da Rússia (AEAFR)</strong> foi fundada em 1975 e representa mais de 1 200 estudantes angolanos distribuídos por universidades de toda a Rússia.</p>
-        <p>A nossa missão é apoiar os estudantes angolanos durante a sua formação académica, facilitar a integração na sociedade russa e criar pontes para o desenvolvimento de Angola.</p>
-        <div class="sobre-links">
-          <a href="sobre.html" class="btn-outline">Conhecer a Associação</a>
-          <a href="contacto.html" class="btn-primary">Falar Connosco</a>
+    <!-- ===== CATEGORIAS (abaixo do conteúdo) ===== -->
+    <section class="categories-section">
+      <div class="categories-inner">
+        <h2 class="cat-title">Explorar por Área</h2>
+        <div class="cat-grid">
+          <a href="#" class="cat-item">
+            <span class="cat-icon">⚙️</span>
+            <span class="cat-name">Engenharia</span>
+            <span class="cat-num">124</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">🏥</span>
+            <span class="cat-name">Medicina</span>
+            <span class="cat-num">98</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">💻</span>
+            <span class="cat-name">Tecnologia</span>
+            <span class="cat-num">87</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">💰</span>
+            <span class="cat-name">Economia</span>
+            <span class="cat-num">65</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">⚗️</span>
+            <span class="cat-name">Ciências</span>
+            <span class="cat-num">54</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">⚖️</span>
+            <span class="cat-name">Direito</span>
+            <span class="cat-num">43</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">🏗️</span>
+            <span class="cat-name">Arquitectura</span>
+            <span class="cat-num">32</span>
+          </a>
+          <a href="#" class="cat-item">
+            <span class="cat-icon">🌾</span>
+            <span class="cat-name">Agronomia</span>
+            <span class="cat-num">28</span>
+          </a>
         </div>
       </div>
-      <div class="sobre-cards">
-        <div class="sobre-card">
-          <div class="sobre-card-icon">🎯</div>
-          <h4>Missão</h4>
-          <p>Apoiar e representar os estudantes angolanos na Rússia em todos os domínios da vida académica e social.</p>
-        </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon">👁️</div>
-          <h4>Visão</h4>
-          <p>Ser a principal plataforma de ligação entre Angola e a Federação da Rússia no domínio da educação.</p>
-        </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon">💎</div>
-          <h4>Valores</h4>
-          <p>Solidariedade, excelência académica, identidade angolana e cooperação internacional.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section" id="contacto">
-    <div class="container newsletter-inner">
-      <div class="newsletter-text">
-        <h2>Fica sempre informado</h2>
-        <p>Subscreve a nossa newsletter e recebe as últimas bolsas, estágios e notícias directamente no teu email.</p>
-      </div>
-      <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-        <input type="email" id="newsletterEmail" placeholder="O teu endereço de email" required />
-        <button type="submit">Subscrever</button>
-      </form>
-      <p class="newsletter-privacy">Não partilhamos os teus dados. Podes cancelar a subscrição a qualquer momento.</p>
-    </div>
-  </section>
+    <!-- ===== EVENTOS & NOTÍCIAS ===== -->
+    <section class="extra-section">
+      <div class="extra-inner">
 
-  <!-- FOOTER -->
+        <!-- EVENTOS -->
+        <div class="extra-col">
+          <div class="extra-header">
+            <h2>Próximos Eventos</h2>
+            <a href="eventos.html">Ver todos »</a>
+          </div>
+          <div class="events-list">
+            <article class="event-item">
+              <div class="event-date"><span class="eday">03</span><span class="emon">MAI</span></div>
+              <div class="event-info">
+                <h4><a href="#">Assembleia Geral da AEAFR 2026</a></h4>
+                <p>📍 Centro Cultural Angolano, Moscovo &nbsp;·&nbsp; 14h00</p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-date" style="background:#e67e00"><span class="eday">10</span><span class="emon">MAI</span></div>
+              <div class="event-info">
+                <h4><a href="#">Feira de Emprego Angola–Rússia 2026</a></h4>
+                <p>📍 Expocentre, Moscovo &nbsp;·&nbsp; 10h00–18h00</p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-date" style="background:#1a7a3a"><span class="eday">17</span><span class="emon">MAI</span></div>
+              <div class="event-info">
+                <h4><a href="#">Workshop: Como Candidatar a Bolsas</a></h4>
+                <p>📍 Online (Zoom) &nbsp;·&nbsp; 18h00</p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-date" style="background:#6a1b9a"><span class="eday">25</span><span class="emon">MAI</span></div>
+              <div class="event-info">
+                <h4><a href="#">Noite Cultural Angolana — Kizomba</a></h4>
+                <p>📍 Clube MGTU, Moscovo &nbsp;·&nbsp; 19h00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- NOTÍCIAS -->
+        <div class="extra-col">
+          <div class="extra-header">
+            <h2>Últimas Notícias</h2>
+            <a href="noticias.html">Ver todas »</a>
+          </div>
+          <div class="news-list">
+            <article class="news-item">
+              <div class="news-img" style="background:linear-gradient(135deg,#cc0000,#600)">🎓</div>
+              <div class="news-info">
+                <span class="news-cat">Bolsas</span>
+                <h4><a href="#">Governo angolano abre 500 novas vagas para 2026/27 na Rússia</a></h4>
+                <span class="news-date">24 Abr 2026</span>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-img" style="background:linear-gradient(135deg,#1565c0,#0d47a1)">🏛️</div>
+              <div class="news-info">
+                <span class="news-cat">Diplomacia</span>
+                <h4><a href="#">Embaixada de Angola lança novo serviço consular online</a></h4>
+                <span class="news-date">20 Abr 2026</span>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-img" style="background:linear-gradient(135deg,#1a7a3a,#0a5928)">💼</div>
+              <div class="news-info">
+                <span class="news-cat">Carreira</span>
+                <h4><a href="#">Feira de Emprego Angola-Rússia 2026 recebe inscrições</a></h4>
+                <span class="news-date">18 Abr 2026</span>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-img" style="background:linear-gradient(135deg,#e67e00,#b85e00)">🌍</div>
+              <div class="news-info">
+                <span class="news-cat">Cultura</span>
+                <h4><a href="#">Semana da Cultura Angolana em Moscovo celebra 30 anos</a></h4>
+                <span class="news-date">12 Abr 2026</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container footer-grid">
-
-      <div class="footer-brand">
-        <div class="logo">
-          <div class="logo-icon">🎓</div>
-          <div class="logo-text">
-            <span class="logo-main" style="color:#fff">AEAFR</span>
-            <span class="logo-sub" style="color:rgba(255,255,255,0.6)">Estudantes Angolanos na Rússia</span>
+    <div class="footer-top">
+      <div class="footer-inner">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">🎓 <strong>AEAFR</strong></div>
+          <p>Portal oficial da Associação dos Estudantes Angolanos na Federação da Rússia. Unidos pelo saber, movidos por Angola.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">in</a><a href="#">tg</a><a href="#">wa</a>
           </div>
         </div>
-        <p>O portal oficial da Associação dos Estudantes Angolanos na Federação da Rússia. Unidos pelo saber, movidos por Angola.</p>
-        <div class="footer-social">
-          <a href="#" class="social-link" title="Facebook">f</a>
-          <a href="#" class="social-link" title="Instagram">in</a>
-          <a href="#" class="social-link" title="Telegram">tg</a>
-          <a href="#" class="social-link" title="WhatsApp">wa</a>
-          <a href="#" class="social-link" title="YouTube">yt</a>
+        <div class="footer-col">
+          <h4>Portal</h4>
+          <ul>
+            <li><a href="bolsas.html">Bolsas de Estudo</a></li>
+            <li><a href="estagios.html">Estágios</a></li>
+            <li><a href="empregos.html">Empregos</a></li>
+            <li><a href="cursos.html">Cursos &amp; Formação</a></li>
+            <li><a href="alojamento.html">Alojamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#">Apoio Jurídico</a></li>
+            <li><a href="#">Saúde &amp; Seguro</a></li>
+            <li><a href="#">Serviços de Tradução</a></li>
+            <li><a href="#">Documentação</a></li>
+            <li><a href="#">Informações de Visto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Associação</h4>
+          <ul>
+            <li><a href="#">Sobre a AEAFR</a></li>
+            <li><a href="#">Direcção</a></li>
+            <li><a href="#">Estatutos</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul class="footer-contact-list">
+            <li>📍 Rua Lenina 25, Moscovo</li>
+            <li>📞 +7 (495) 000-0000</li>
+            <li>✉️ geral@aeafr.org</li>
+            <li>🕐 Seg–Sex: 9h–18h</li>
+          </ul>
         </div>
       </div>
-
-      <div class="footer-col">
-        <h4>Portal</h4>
-        <ul>
-          <li><a href="bolsas.html">Bolsas de Estudo</a></li>
-          <li><a href="estagios.html">Estágios</a></li>
-          <li><a href="empregos.html">Empregos</a></li>
-          <li><a href="cursos.html">Cursos & Formação</a></li>
-          <li><a href="alojamento.html">Alojamento</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Serviços</h4>
-        <ul>
-          <li><a href="servicos.html">Apoio Jurídico</a></li>
-          <li><a href="saude.html">Saúde & Seguro</a></li>
-          <li><a href="traducao.html">Serviços de Tradução</a></li>
-          <li><a href="documentos.html">Documentação</a></li>
-          <li><a href="visto.html">Informações de Visto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Associação</h4>
-        <ul>
-          <li><a href="sobre.html">Sobre a AEAFR</a></li>
-          <li><a href="direcao.html">Direcção</a></li>
-          <li><a href="estatutos.html">Estatutos</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contacto</h4>
-        <ul class="footer-contact">
-          <li>📍 Rua Lenina 25, Moscovo, Rússia</li>
-          <li>📞 +7 (495) 000-0000</li>
-          <li>✉️ geral@aeafr.org</li>
-          <li>🕐 Seg–Sex: 9h–18h (MSK)</li>
-        </ul>
-      </div>
-
     </div>
-
     <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <span>© 2026 AEAFR — Associação dos Estudantes Angolanos na Federação da Rússia. Todos os direitos reservados.</span>
-        <div class="footer-bottom-links">
-          <a href="privacidade.html">Privacidade</a>
-          <a href="termos.html">Termos de Uso</a>
-          <a href="cookies.html">Cookies</a>
+      <div class="footer-inner">
+        <span>© 2026 AEAFR — Associação dos Estudantes Angolanos na Federação da Rússia</span>
+        <div class="footer-links">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+          <a href="#">Cookies</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <script src="js/main.js"></script>
 </body>
