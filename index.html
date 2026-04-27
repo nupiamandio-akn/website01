@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- ===== TOPBAR PRETA ===== -->
+  <!-- TOPBAR -->
   <div class="topbar">
     <div class="topbar-left">
       <span class="topbar-menu">MENU</span>
@@ -19,22 +19,18 @@
       <a href="#">NOTÍCIAS</a>
     </div>
     <div class="topbar-center">
-      <a href="index.html" class="topbar-logo">
-        <div class="topbar-logo-icon">🎓</div>
-        <span class="topbar-logo-text">AEAFR</span>
-      </a>
+      <a href="index.html" class="topbar-logo">AEAFR</a>
     </div>
     <div class="topbar-right">
-      <a href="#" title="Notificações">🔔</a>
-      <a href="login.html" title="Conta">👤</a>
+      <a href="login.html" class="topbar-btn">Entrar</a>
+      <a href="register.html" class="topbar-btn topbar-btn-accent">Registar</a>
     </div>
   </div>
 
-  <!-- ===== HEADER BRANCO ===== -->
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="header-inner">
       <a href="index.html" class="brand">PORTAL</a>
-
       <nav class="main-nav">
         <a href="index.html" class="nav-item active">BOLSAS</a>
         <a href="estagios.html" class="nav-item bordered">ESTÁGIOS</a>
@@ -48,12 +44,10 @@
           <small>Publicar Anúncio Grátis</small>
         </a>
       </nav>
-
       <button class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </button>
     </div>
-
     <nav class="mobile-nav" id="mobileNav">
       <a href="index.html">Bolsas</a>
       <a href="estagios.html">Estágios</a>
@@ -63,12 +57,11 @@
     </nav>
   </header>
 
-  <!-- ===== HERO TEAL ===== -->
+  <!-- HERO COM FOTO -->
   <section class="hero">
     <div class="hero-inner">
       <h1 class="hero-title">Encontre a oportunidade certa</h1>
-      <p class="hero-sub">1 240 oportunidades à sua espera!</p>
-
+      <p class="hero-sub">1 240 oportunidades à sua espera na Federação da Rússia!</p>
       <div class="search-bar">
         <div class="search-field search-keyword">
           <input type="text" id="searchKeyword" placeholder="Palavra-chave, Área, Bolsa ou Localidade" />
@@ -85,7 +78,7 @@
             <option>Arquitectura</option>
             <option>Agronomia</option>
           </select>
-          <span class="select-arrow">▾</span>
+          <span class="select-arrow">&#9662;</span>
         </div>
         <div class="search-field search-select">
           <select id="searchType">
@@ -94,13 +87,11 @@
             <option>Estágio</option>
             <option>Emprego</option>
             <option>Curso / Formação</option>
-            <option>Alojamento</option>
           </select>
-          <span class="select-arrow">▾</span>
+          <span class="select-arrow">&#9662;</span>
         </div>
         <button class="btn-search" onclick="doSearch()">PROCURAR</button>
       </div>
-
       <div class="hero-tags">
         <span class="tag-label">Sugestões:</span>
         <a href="#" class="hero-tag">Bolsa Total</a>
@@ -109,21 +100,18 @@
         <a href="#" class="hero-tag">Moscovo</a>
         <a href="#" class="hero-tag">Estágio Remunerado</a>
         <a href="#" class="hero-tag">PhD</a>
-        <a href="#" class="hero-tag">Remoto</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== CORPO PRINCIPAL ===== -->
+  <!-- MAIN -->
   <main class="main-content">
     <div class="content-wrap">
 
-      <!-- SIDEBAR FILTROS -->
+      <!-- SIDEBAR -->
       <aside class="sidebar">
-
         <div class="sidebar-block">
           <h3 class="sidebar-title">Filtrar Resultados</h3>
-
           <div class="filter-group">
             <h4 class="filter-heading">Tipo de Oportunidade</h4>
             <label class="fcheck"><input type="checkbox" checked /> Bolsas de Estudo <span class="fcount">(83)</span></label>
@@ -131,7 +119,6 @@
             <label class="fcheck"><input type="checkbox" /> Empregos <span class="fcount">(145)</span></label>
             <label class="fcheck"><input type="checkbox" /> Cursos <span class="fcount">(34)</span></label>
           </div>
-
           <div class="filter-group">
             <h4 class="filter-heading">Nível Académico</h4>
             <label class="fcheck"><input type="checkbox" /> Licenciatura</label>
@@ -139,7 +126,6 @@
             <label class="fcheck"><input type="checkbox" /> Doutoramento</label>
             <label class="fcheck"><input type="checkbox" /> Pós-Doutoramento</label>
           </div>
-
           <div class="filter-group">
             <h4 class="filter-heading">Cidade</h4>
             <label class="fcheck"><input type="checkbox" /> Moscovo</label>
@@ -148,15 +134,12 @@
             <label class="fcheck"><input type="checkbox" /> Novosibirsk</label>
             <label class="fcheck"><input type="checkbox" /> Ecaterimburgo</label>
           </div>
-
           <div class="filter-group">
             <h4 class="filter-heading">Financiamento</h4>
             <label class="fcheck"><input type="checkbox" /> Bolsa Total</label>
             <label class="fcheck"><input type="checkbox" /> Bolsa Parcial</label>
             <label class="fcheck"><input type="checkbox" /> Remunerado</label>
-            <label class="fcheck"><input type="checkbox" /> Voluntário</label>
           </div>
-
           <div class="filter-group">
             <h4 class="filter-heading">Entidade</h4>
             <label class="fcheck"><input type="checkbox" /> Governo Angolano</label>
@@ -164,27 +147,25 @@
             <label class="fcheck"><input type="checkbox" /> Universidades</label>
             <label class="fcheck"><input type="checkbox" /> Empresas</label>
           </div>
-
           <button class="btn-filter">Aplicar Filtros</button>
         </div>
-
-        <!-- Banner lateral -->
         <div class="sidebar-banner">
-          <p>Regista o teu <strong>CV</strong> e recebe alertas de oportunidades</p>
-          <a href="register.html" class="btn-banner">Criar Conta Grátis</a>
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=280&h=140&q=80" alt="Estudantes" class="banner-img" loading="lazy" />
+          <div class="sidebar-banner-body">
+            <p>Regista o teu <strong>CV</strong> e recebe alertas de oportunidades</p>
+            <a href="register.html" class="btn-banner">Criar Conta Grátis</a>
+          </div>
         </div>
-
       </aside>
 
-      <!-- LISTAGEM PRINCIPAL -->
+      <!-- LISTAGEM -->
       <section class="listings">
-
         <div class="listings-header">
           <div class="listings-info">
             <span class="listings-count">A mostrar <strong>83</strong> bolsas</span>
             <div class="view-tabs">
-              <button class="view-tab active" title="Lista">☰</button>
-              <button class="view-tab" title="Grelha">⊞</button>
+              <button class="view-tab active" title="Lista">&#9776;</button>
+              <button class="view-tab" title="Grelha">&#8862;</button>
             </div>
           </div>
           <div class="listings-sort">
@@ -197,18 +178,17 @@
           </div>
         </div>
 
-        <!-- DESTAQUE -->
         <div class="listings-section-title">Em Destaque</div>
 
         <article class="listing-card listing-featured">
-          <div class="listing-logo" style="background:#cc0000">BES</div>
+          <div class="listing-logo bg-red">BES</div>
           <div class="listing-body">
             <div class="listing-meta-top">
               <span class="listing-badge badge-destaque">Destaque</span>
               <span class="listing-date">há 1 dia</span>
             </div>
             <h2 class="listing-title"><a href="#">Bolsa de Excelência — Engenharia e Tecnologia</a></h2>
-            <p class="listing-org">MGTU N.E. Bauman &nbsp;·&nbsp; Moscovo</p>
+            <p class="listing-org">MGTU N.E. Bauman &nbsp;&middot;&nbsp; Moscovo</p>
             <p class="listing-desc">Bolsa completa para estudantes angolanos no Mestrado em Engenharia. Cobre propinas, alojamento e subsídio mensal de 25 000 ₽.</p>
             <div class="listing-tags">
               <span class="ltag">Mestrado</span>
@@ -219,20 +199,20 @@
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar" title="Guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 30 Mai 2026</span>
           </div>
         </article>
 
         <article class="listing-card listing-featured">
-          <div class="listing-logo" style="background:#1a7a3a">BMA</div>
+          <div class="listing-logo bg-green">BMA</div>
           <div class="listing-body">
             <div class="listing-meta-top">
               <span class="listing-badge badge-nova">Nova</span>
               <span class="listing-date">há 2 dias</span>
             </div>
             <h2 class="listing-title"><a href="#">Programa Nacional de Bolsas Angola–Rússia 2026/27</a></h2>
-            <p class="listing-org">Embaixada de Angola em Moscovo &nbsp;·&nbsp; Toda a Rússia</p>
+            <p class="listing-org">Embaixada de Angola em Moscovo &nbsp;&middot;&nbsp; Toda a Rússia</p>
             <p class="listing-desc">O Ministério do Ensino Superior de Angola abre 500 novas vagas para universidades russas de prestígio no ano lectivo 2026/27.</p>
             <div class="listing-tags">
               <span class="ltag">Licenciatura</span>
@@ -243,22 +223,19 @@
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar" title="Guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 15 Jun 2026</span>
           </div>
         </article>
 
-        <!-- MAIS RECENTES -->
         <div class="listings-section-title">Mais Recentes</div>
 
         <article class="listing-card">
-          <div class="listing-logo" style="background:#1565c0">RSF</div>
+          <div class="listing-logo bg-blue">RSF</div>
           <div class="listing-body">
-            <div class="listing-meta-top">
-              <span class="listing-date">há 3 dias</span>
-            </div>
+            <div class="listing-meta-top"><span class="listing-date">há 3 dias</span></div>
             <h2 class="listing-title"><a href="#">Bolsa do Governo Federal Russo para Estudantes Africanos</a></h2>
-            <p class="listing-org">Rosotrudnichestvo &nbsp;·&nbsp; Toda a Rússia</p>
+            <p class="listing-org">Rosotrudnichestvo &nbsp;&middot;&nbsp; Toda a Rússia</p>
             <div class="listing-tags">
               <span class="ltag">Todos os níveis</span>
               <span class="ltag">Todas as áreas</span>
@@ -267,20 +244,20 @@
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 1 Jul 2026</span>
           </div>
         </article>
 
         <article class="listing-card">
-          <div class="listing-logo" style="background:#6a1b9a">SPB</div>
+          <div class="listing-logo bg-purple">SPB</div>
           <div class="listing-body">
             <div class="listing-meta-top">
               <span class="listing-badge badge-urgente">Urgente</span>
               <span class="listing-date">há 4 dias</span>
             </div>
             <h2 class="listing-title"><a href="#">Bolsa de Investigação — Universidade de São Petersburgo</a></h2>
-            <p class="listing-org">SPbGU &nbsp;·&nbsp; São Petersburgo</p>
+            <p class="listing-org">SPbGU &nbsp;&middot;&nbsp; São Petersburgo</p>
             <div class="listing-tags">
               <span class="ltag">PhD</span>
               <span class="ltag">Investigação</span>
@@ -289,137 +266,115 @@
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 10 Mai 2026</span>
           </div>
         </article>
 
         <article class="listing-card">
-          <div class="listing-logo" style="background:#e67e00">KFU</div>
+          <div class="listing-logo bg-orange">KFU</div>
           <div class="listing-body">
-            <div class="listing-meta-top">
-              <span class="listing-date">há 5 dias</span>
-            </div>
+            <div class="listing-meta-top"><span class="listing-date">há 5 dias</span></div>
             <h2 class="listing-title"><a href="#">Bolsa de Medicina — Universidade Federal de Cazã</a></h2>
-            <p class="listing-org">KFU &nbsp;·&nbsp; Cazã</p>
+            <p class="listing-org">KFU &nbsp;&middot;&nbsp; Cazã</p>
             <div class="listing-tags">
-              <span class="ltag">Mestrado</span>
-              <span class="ltag">Medicina</span>
-              <span class="ltag">Bolsa Parcial</span>
+              <span class="ltag">Mestrado</span><span class="ltag">Medicina</span><span class="ltag">Bolsa Parcial</span>
             </div>
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 20 Jun 2026</span>
           </div>
         </article>
 
         <article class="listing-card">
-          <div class="listing-logo" style="background:#00838f">NSU</div>
+          <div class="listing-logo bg-teal">NSU</div>
           <div class="listing-body">
-            <div class="listing-meta-top">
-              <span class="listing-date">há 6 dias</span>
-            </div>
+            <div class="listing-meta-top"><span class="listing-date">há 6 dias</span></div>
             <h2 class="listing-title"><a href="#">Bolsa de Ciências — Universidade de Novosibirsk</a></h2>
-            <p class="listing-org">NSU &nbsp;·&nbsp; Novosibirsk</p>
+            <p class="listing-org">NSU &nbsp;&middot;&nbsp; Novosibirsk</p>
             <div class="listing-tags">
-              <span class="ltag">Licenciatura</span>
-              <span class="ltag">Ciências</span>
-              <span class="ltag">Subsídio Mensal</span>
+              <span class="ltag">Licenciatura</span><span class="ltag">Ciências</span><span class="ltag">Subsídio</span>
             </div>
           </div>
           <div class="listing-actions">
             <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar">🔖 Guardar</button>
+            <button class="btn-guardar">Guardar</button>
             <span class="listing-deadline">Até 5 Jul 2026</span>
           </div>
         </article>
 
-        <article class="listing-card">
-          <div class="listing-logo" style="background:#d32f2f">RUDN</div>
-          <div class="listing-body">
-            <div class="listing-meta-top">
-              <span class="listing-date">há 1 semana</span>
-            </div>
-            <h2 class="listing-title"><a href="#">Bolsa RUDN — Relações Internacionais e Direito</a></h2>
-            <p class="listing-org">RUDN University &nbsp;·&nbsp; Moscovo</p>
-            <div class="listing-tags">
-              <span class="ltag">Licenciatura</span>
-              <span class="ltag">Direito</span>
-              <span class="ltag">Relações Internacionais</span>
-            </div>
-          </div>
-          <div class="listing-actions">
-            <a href="#" class="btn-candidatar">Candidatar</a>
-            <button class="btn-guardar">🔖 Guardar</button>
-            <span class="listing-deadline">Até 30 Jun 2026</span>
-          </div>
-        </article>
-
-        <!-- PAGINAÇÃO -->
         <div class="pagination">
           <button class="pag-btn active">1</button>
           <button class="pag-btn">2</button>
           <button class="pag-btn">3</button>
-          <span class="pag-ellipsis">…</span>
+          <span class="pag-ellipsis">&hellip;</span>
           <button class="pag-btn">9</button>
-          <button class="pag-btn pag-next">Seguinte »</button>
+          <button class="pag-btn pag-next">Seguinte &raquo;</button>
         </div>
-
       </section>
     </div>
 
-    <!-- ===== CATEGORIAS (abaixo do conteúdo) ===== -->
+    <!-- CATEGORIAS COM FOTOS -->
     <section class="categories-section">
       <div class="categories-inner">
-        <h2 class="cat-title">Explorar por Área</h2>
+        <h2 class="section-heading">Explorar por Área</h2>
         <div class="cat-grid">
-          <a href="#" class="cat-item">
-            <span class="cat-icon">⚙️</span>
-            <span class="cat-name">Engenharia</span>
-            <span class="cat-num">124</span>
+
+          <a href="bolsas.html?area=engenharia" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Engenharia</span><span class="cat-count">124 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">🏥</span>
-            <span class="cat-name">Medicina</span>
-            <span class="cat-num">98</span>
+
+          <a href="bolsas.html?area=medicina" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Medicina</span><span class="cat-count">98 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">💻</span>
-            <span class="cat-name">Tecnologia</span>
-            <span class="cat-num">87</span>
+
+          <a href="bolsas.html?area=tecnologia" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Tecnologia</span><span class="cat-count">87 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">💰</span>
-            <span class="cat-name">Economia</span>
-            <span class="cat-num">65</span>
+
+          <a href="bolsas.html?area=economia" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Economia</span><span class="cat-count">65 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">⚗️</span>
-            <span class="cat-name">Ciências</span>
-            <span class="cat-num">54</span>
+
+          <a href="bolsas.html?area=ciencias" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1532094349884-543559244c1d?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Ciências</span><span class="cat-count">54 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">⚖️</span>
-            <span class="cat-name">Direito</span>
-            <span class="cat-num">43</span>
+
+          <a href="bolsas.html?area=direito" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Direito</span><span class="cat-count">43 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">🏗️</span>
-            <span class="cat-name">Arquitectura</span>
-            <span class="cat-num">32</span>
+
+          <a href="bolsas.html?area=arquitectura" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Arquitectura</span><span class="cat-count">32 vagas</span></div>
           </a>
-          <a href="#" class="cat-item">
-            <span class="cat-icon">🌾</span>
-            <span class="cat-name">Agronomia</span>
-            <span class="cat-num">28</span>
+
+          <a href="bolsas.html?area=agronomia" class="cat-item" style="--img:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80')">
+            <div class="cat-overlay"><span class="cat-name">Agronomia</span><span class="cat-count">28 vagas</span></div>
           </a>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== EVENTOS & NOTÍCIAS ===== -->
+    <!-- BANNER CTA COM FOTO -->
+    <section class="cta-photo">
+      <div class="cta-photo-overlay">
+        <div class="cta-photo-inner">
+          <div class="cta-text">
+            <h2>Junta-te a mais de 1 200 estudantes angolanos na Rússia</h2>
+            <p>Regista-te gratuitamente, guarda o teu CV e recebe alertas personalizados de bolsas e estágios.</p>
+          </div>
+          <div class="cta-btns">
+            <a href="register.html" class="btn-cta-white">Criar Conta Grátis</a>
+            <a href="bolsas.html" class="btn-cta-outline">Ver Todas as Bolsas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTOS E NOTÍCIAS -->
     <section class="extra-section">
       <div class="extra-inner">
 
@@ -427,37 +382,46 @@
         <div class="extra-col">
           <div class="extra-header">
             <h2>Próximos Eventos</h2>
-            <a href="eventos.html">Ver todos »</a>
+            <a href="eventos.html">Ver todos &raquo;</a>
           </div>
           <div class="events-list">
+
             <article class="event-item">
-              <div class="event-date"><span class="eday">03</span><span class="emon">MAI</span></div>
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=90&h=72&q=80" alt="Assembleia" class="event-img" loading="lazy" />
               <div class="event-info">
+                <div class="event-date-label">3 Mai 2026 &nbsp;&middot;&nbsp; 14h00</div>
                 <h4><a href="#">Assembleia Geral da AEAFR 2026</a></h4>
-                <p>📍 Centro Cultural Angolano, Moscovo &nbsp;·&nbsp; 14h00</p>
+                <p>Centro Cultural Angolano, Moscovo</p>
               </div>
             </article>
+
             <article class="event-item">
-              <div class="event-date" style="background:#e67e00"><span class="eday">10</span><span class="emon">MAI</span></div>
+              <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=90&h=72&q=80" alt="Feira" class="event-img" loading="lazy" />
               <div class="event-info">
+                <div class="event-date-label">10 Mai 2026 &nbsp;&middot;&nbsp; 10h00</div>
                 <h4><a href="#">Feira de Emprego Angola–Rússia 2026</a></h4>
-                <p>📍 Expocentre, Moscovo &nbsp;·&nbsp; 10h00–18h00</p>
+                <p>Expocentre, Moscovo</p>
               </div>
             </article>
+
             <article class="event-item">
-              <div class="event-date" style="background:#1a7a3a"><span class="eday">17</span><span class="emon">MAI</span></div>
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=90&h=72&q=80" alt="Workshop" class="event-img" loading="lazy" />
               <div class="event-info">
+                <div class="event-date-label">17 Mai 2026 &nbsp;&middot;&nbsp; 18h00</div>
                 <h4><a href="#">Workshop: Como Candidatar a Bolsas</a></h4>
-                <p>📍 Online (Zoom) &nbsp;·&nbsp; 18h00</p>
+                <p>Online (Zoom)</p>
               </div>
             </article>
+
             <article class="event-item">
-              <div class="event-date" style="background:#6a1b9a"><span class="eday">25</span><span class="emon">MAI</span></div>
+              <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=90&h=72&q=80" alt="Cultural" class="event-img" loading="lazy" />
               <div class="event-info">
-                <h4><a href="#">Noite Cultural Angolana — Kizomba</a></h4>
-                <p>📍 Clube MGTU, Moscovo &nbsp;·&nbsp; 19h00</p>
+                <div class="event-date-label">25 Mai 2026 &nbsp;&middot;&nbsp; 19h00</div>
+                <h4><a href="#">Noite Cultural Angolana — Kizomba &amp; Gastronomia</a></h4>
+                <p>Clube MGTU, Moscovo</p>
               </div>
             </article>
+
           </div>
         </div>
 
@@ -465,41 +429,46 @@
         <div class="extra-col">
           <div class="extra-header">
             <h2>Últimas Notícias</h2>
-            <a href="noticias.html">Ver todas »</a>
+            <a href="noticias.html">Ver todas &raquo;</a>
           </div>
           <div class="news-list">
+
             <article class="news-item">
-              <div class="news-img" style="background:linear-gradient(135deg,#cc0000,#600)">🎓</div>
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=90&h=72&q=80" alt="Bolsas" class="news-img" loading="lazy" />
               <div class="news-info">
                 <span class="news-cat">Bolsas</span>
                 <h4><a href="#">Governo angolano abre 500 novas vagas para 2026/27 na Rússia</a></h4>
                 <span class="news-date">24 Abr 2026</span>
               </div>
             </article>
+
             <article class="news-item">
-              <div class="news-img" style="background:linear-gradient(135deg,#1565c0,#0d47a1)">🏛️</div>
+              <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=90&h=72&q=80" alt="Diplomacia" class="news-img" loading="lazy" />
               <div class="news-info">
                 <span class="news-cat">Diplomacia</span>
                 <h4><a href="#">Embaixada de Angola lança novo serviço consular online</a></h4>
                 <span class="news-date">20 Abr 2026</span>
               </div>
             </article>
+
             <article class="news-item">
-              <div class="news-img" style="background:linear-gradient(135deg,#1a7a3a,#0a5928)">💼</div>
+              <img src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=90&h=72&q=80" alt="Carreira" class="news-img" loading="lazy" />
               <div class="news-info">
                 <span class="news-cat">Carreira</span>
-                <h4><a href="#">Feira de Emprego Angola-Rússia 2026 recebe inscrições</a></h4>
+                <h4><a href="#">Feira de Emprego Angola-Rússia 2026 recebe inscrições até Maio</a></h4>
                 <span class="news-date">18 Abr 2026</span>
               </div>
             </article>
+
             <article class="news-item">
-              <div class="news-img" style="background:linear-gradient(135deg,#e67e00,#b85e00)">🌍</div>
+              <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=90&h=72&q=80" alt="Moscovo" class="news-img" loading="lazy" />
               <div class="news-info">
                 <span class="news-cat">Cultura</span>
-                <h4><a href="#">Semana da Cultura Angolana em Moscovo celebra 30 anos</a></h4>
+                <h4><a href="#">Semana da Cultura Angolana em Moscovo celebra 30 anos de cooperação</a></h4>
                 <span class="news-date">12 Abr 2026</span>
               </div>
             </article>
+
           </div>
         </div>
 
@@ -508,15 +477,15 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-inner">
         <div class="footer-col footer-brand">
-          <div class="footer-logo">🎓 <strong>AEAFR</strong></div>
+          <div class="footer-logo">AEAFR</div>
           <p>Portal oficial da Associação dos Estudantes Angolanos na Federação da Rússia. Unidos pelo saber, movidos por Angola.</p>
           <div class="footer-social">
-            <a href="#">f</a><a href="#">in</a><a href="#">tg</a><a href="#">wa</a>
+            <a href="#">FB</a><a href="#">IG</a><a href="#">TG</a><a href="#">WA</a>
           </div>
         </div>
         <div class="footer-col">
@@ -524,9 +493,9 @@
           <ul>
             <li><a href="bolsas.html">Bolsas de Estudo</a></li>
             <li><a href="estagios.html">Estágios</a></li>
-            <li><a href="empregos.html">Empregos</a></li>
-            <li><a href="cursos.html">Cursos &amp; Formação</a></li>
-            <li><a href="alojamento.html">Alojamento</a></li>
+            <li><a href="#">Empregos</a></li>
+            <li><a href="#">Cursos &amp; Formação</a></li>
+            <li><a href="#">Alojamento</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -552,17 +521,17 @@
         <div class="footer-col">
           <h4>Contacto</h4>
           <ul class="footer-contact-list">
-            <li>📍 Rua Lenina 25, Moscovo</li>
-            <li>📞 +7 (495) 000-0000</li>
-            <li>✉️ geral@aeafr.org</li>
-            <li>🕐 Seg–Sex: 9h–18h</li>
+            <li>Rua Lenina 25, Moscovo</li>
+            <li>+7 (495) 000-0000</li>
+            <li>geral@aeafr.org</li>
+            <li>Seg&ndash;Sex: 9h&ndash;18h</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-inner">
-        <span>© 2026 AEAFR — Associação dos Estudantes Angolanos na Federação da Rússia</span>
+      <div class="footer-inner footer-bottom-inner">
+        <span>&copy; 2026 AEAFR &mdash; Associação dos Estudantes Angolanos na Federação da Rússia</span>
         <div class="footer-links">
           <a href="#">Privacidade</a>
           <a href="#">Termos</a>
@@ -572,8 +541,7 @@
     </div>
   </footer>
 
-  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
   <script src="js/main.js"></script>
 </body>
 </html>
