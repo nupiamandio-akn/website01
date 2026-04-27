@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolsas de Estudo — AEAFR</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>🇦🇴 Portal Oficial da AEAFR &nbsp;|&nbsp; Moscovo, Federação da Rússia</span>
+      <div class="topbar-links">
+        <a href="index.html#contacto">Contacto</a>
+        <a href="login.html" class="btn-topbar">Entrar</a>
+        <a href="register.html" class="btn-topbar btn-topbar-accent">Registar</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        <div class="logo-text">
+          <span class="logo-main">AEAFR</span>
+          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="index.html#oportunidades" class="nav-link">Oportunidades</a>
+        <a href="bolsas.html" class="nav-link active">Bolsas</a>
+        <a href="estagios.html" class="nav-link">Estágios</a>
+        <a href="index.html#noticias" class="nav-link">Notícias</a>
+        <a href="index.html#eventos" class="nav-link">Eventos</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Início</a>
+      <a href="bolsas.html">Bolsas</a>
+      <a href="estagios.html">Estágios</a>
+      <a href="index.html#noticias">Notícias</a>
+      <a href="index.html#eventos">Eventos</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a> › Bolsas de Estudo</div>
+      <h1>Bolsas de Estudo</h1>
+      <p>Encontra a bolsa certa para financiar a tua formação académica na Rússia e além.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS + RESULTS -->
+  <section class="listing-section">
+    <div class="container listing-inner">
+
+      <!-- FILTERS SIDEBAR -->
+      <aside class="filters-sidebar">
+        <h3 class="filters-title">Filtrar por</h3>
+
+        <div class="filter-group">
+          <label class="filter-label">Nível Académico</label>
+          <div class="filter-options">
+            <label class="filter-check"><input type="checkbox" value="licenciatura" /> Licenciatura</label>
+            <label class="filter-check"><input type="checkbox" value="mestrado" /> Mestrado</label>
+            <label class="filter-check"><input type="checkbox" value="phd" /> Doutoramento (PhD)</label>
+            <label class="filter-check"><input type="checkbox" value="pos-doc" /> Pós-Doutoramento</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Área de Estudo</label>
+          <div class="filter-options">
+            <label class="filter-check"><input type="checkbox" /> Engenharia & Tecnologia</label>
+            <label class="filter-check"><input type="checkbox" /> Medicina & Saúde</label>
+            <label class="filter-check"><input type="checkbox" /> Ciências Naturais</label>
+            <label class="filter-check"><input type="checkbox" /> Economia & Negócios</label>
+            <label class="filter-check"><input type="checkbox" /> Ciências Sociais & Direito</label>
+            <label class="filter-check"><input type="checkbox" /> Artes & Humanidades</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Cidade</label>
+          <select class="filter-select">
+            <option value="">Todas as cidades</option>
+            <option>Moscovo</option>
+            <option>São Petersburgo</option>
+            <option>Novosibirsk</option>
+            <option>Ecaterimburgo</option>
+            <option>Cazã</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Financiamento</label>
+          <div class="filter-options">
+            <label class="filter-check"><input type="checkbox" /> Bolsa Total (propinas + subsídio)</label>
+            <label class="filter-check"><input type="checkbox" /> Bolsa Parcial (propinas)</label>
+            <label class="filter-check"><input type="checkbox" /> Subsídio Mensal</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Entidade Financiadora</label>
+          <div class="filter-options">
+            <label class="filter-check"><input type="checkbox" /> Governo Angolano</label>
+            <label class="filter-check"><input type="checkbox" /> Governo Russo</label>
+            <label class="filter-check"><input type="checkbox" /> Universidades</label>
+            <label class="filter-check"><input type="checkbox" /> Empresas / ONG</label>
+          </div>
+        </div>
+
+        <button class="btn-filter-apply">Aplicar Filtros</button>
+        <button class="btn-filter-clear">Limpar Filtros</button>
+      </aside>
+
+      <!-- RESULTS -->
+      <div class="results-area">
+        <div class="results-header">
+          <span class="results-count"><strong>83</strong> bolsas encontradas</span>
+          <div class="results-sort">
+            <label>Ordenar por:</label>
+            <select>
+              <option>Mais recentes</option>
+              <option>Prazo mais próximo</option>
+              <option>Valor (maior)</option>
+              <option>Mais relevantes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-list">
+
+          <article class="result-card">
+            <div class="result-logo" style="background:#cc0000">BES</div>
+            <div class="result-info">
+              <div class="result-badges">
+                <span class="oport-badge destaque">Destaque</span>
+                <span class="tag">Engenharia</span>
+                <span class="tag">Mestrado</span>
+                <span class="tag">Moscovo</span>
+              </div>
+              <h3><a href="#">Bolsa de Excelência — Engenharia e Tecnologia (MGTU Bauman)</a></h3>
+              <p>Bolsa completa para estudantes angolanos matriculados no programa de Mestrado em Engenharia no MGTU Bauman. Cobre propinas, alojamento e subsídio mensal de 25 000 ₽.</p>
+              <div class="result-meta">
+                <span>🏛️ MGTU Bauman — Moscovo</span>
+                <span>📅 Candidatura até 30 Mai 2026</span>
+                <span>💰 Bolsa Total</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="btn-card">Ver Detalhes</a>
+              <button class="btn-save" title="Guardar">🔖</button>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-logo" style="background:#1a7a3a">BMA</div>
+            <div class="result-info">
+              <div class="result-badges">
+                <span class="oport-badge nova">Nova</span>
+                <span class="tag">Licenciatura</span>
+                <span class="tag">Mestrado</span>
+                <span class="tag">PhD</span>
+              </div>
+              <h3><a href="#">Programa Nacional de Bolsas Angola — Rússia 2026/27</a></h3>
+              <p>O Ministério do Ensino Superior de Angola abre candidaturas para 500 bolsas de estudo em universidades russas de prestígio para o ano lectivo 2026/27.</p>
+              <div class="result-meta">
+                <span>🏛️ Embaixada de Angola, Moscovo</span>
+                <span>📅 Candidatura até 15 Jun 2026</span>
+                <span>💰 Bolsa Total</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="btn-card">Ver Detalhes</a>
+              <button class="btn-save" title="Guardar">🔖</button>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-logo" style="background:#1565c0">RSF</div>
+            <div class="result-info">
+              <div class="result-badges">
+                <span class="tag">Todos os níveis</span>
+                <span class="tag">Todas as áreas</span>
+              </div>
+              <h3><a href="#">Bolsa do Governo Federal Russo para Estudantes Estrangeiros</a></h3>
+              <p>Rosotrudnichestvo disponibiliza bolsas para estudantes africanos em qualquer universidade russa. Inclui isenção de propinas e subsídio de integração.</p>
+              <div class="result-meta">
+                <span>🏛️ Rosotrudnichestvo</span>
+                <span>📅 Candidatura até 01 Jul 2026</span>
+                <span>💰 Propinas + Subsídio</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="btn-card">Ver Detalhes</a>
+              <button class="btn-save" title="Guardar">🔖</button>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-logo" style="background:#6a1b9a">SPB</div>
+            <div class="result-info">
+              <div class="result-badges">
+                <span class="oport-badge urgente">Urgente</span>
+                <span class="tag">PhD</span>
+                <span class="tag">Investigação</span>
+                <span class="tag">São Petersburgo</span>
+              </div>
+              <h3><a href="#">Bolsa de Investigação Científica — Universidade Estatal de São Petersburgo</a></h3>
+              <p>Programa de doutoramento para investigadores africanos em Física, Química, Biologia e Matemática. Inclui acesso a laboratórios de ponta e orientação científica.</p>
+              <div class="result-meta">
+                <span>🏛️ SPbGU — São Petersburgo</span>
+                <span>📅 Candidatura até 10 Mai 2026</span>
+                <span>💰 Bolsa Total + Laboratório</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="btn-card">Ver Detalhes</a>
+              <button class="btn-save" title="Guardar">🔖</button>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-logo" style="background:#e67e00">KAZ</div>
+            <div class="result-info">
+              <div class="result-badges">
+                <span class="tag">Medicina</span>
+                <span class="tag">Mestrado</span>
+                <span class="tag">Cazã</span>
+              </div>
+              <h3><a href="#">Bolsa de Medicina — Universidade Federal de Cazã</a></h3>
+              <p>Bolsa para estudantes angolanos no programa de Medicina Geral e Especialidades Médicas na Universidade Federal de Cazã, uma das mais antigas da Rússia.</p>
+              <div class="result-meta">
+                <span>🏛️ KFU — Cazã</span>
+                <span>📅 Candidatura até 20 Jun 2026</span>
+                <span>💰 Bolsa Parcial</span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <a href="#" class="btn-card">Ver Detalhes</a>
+              <button class="btn-save" title="Guardar">🔖</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span>…</span>
+          <button class="page-btn">9</button>
+          <button class="page-btn page-next">Próxima →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 AEAFR — Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="index.html">Início</a>
+          <a href="index.html#sobre">Sobre</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

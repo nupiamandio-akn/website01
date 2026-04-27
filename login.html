@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar — AEAFR</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <div class="auth-brand">
+      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:8px">
+        <div class="logo-icon">🎓</div>
+        <div class="logo-text">
+          <span class="logo-main">AEAFR</span>
+          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
+        </div>
+      </a>
+      <p class="auth-brand-sub">O teu portal de oportunidades</p>
+    </div>
+
+    <div class="auth-card">
+      <h2 class="auth-title">Bem-vindo de volta</h2>
+      <p class="auth-sub">Entra na tua conta para continuar</p>
+
+      <form class="auth-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="o.teu@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="password">
+            Palavra-passe
+            <a href="recuperar.html" class="form-link-right">Esqueceste?</a>
+          </label>
+          <div class="input-password">
+            <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password" />
+            <button type="button" class="toggle-pw" onclick="togglePw()">👁</button>
+          </div>
+        </div>
+
+        <label class="form-check-label">
+          <input type="checkbox" id="rememberMe" />
+          Manter sessão iniciada
+        </label>
+
+        <button type="submit" class="btn-auth-submit">Entrar</button>
+      </form>
+
+      <div class="auth-divider"><span>ou</span></div>
+
+      <div class="auth-alt">
+        <p>Ainda não tens conta? <a href="register.html" class="form-link">Registar gratuitamente →</a></p>
+      </div>
+    </div>
+
+    <a href="index.html" class="auth-back">← Voltar ao portal</a>
+  </div>
+
+  <div class="auth-visual">
+    <div class="auth-visual-content">
+      <div class="auth-visual-icon">🎓</div>
+      <h3>Mais de 1 200 estudantes</h3>
+      <p>Conectados através da AEAFR a bolsas, estágios e oportunidades de carreira.</p>
+      <div class="auth-visual-stats">
+        <div class="av-stat"><span>83</span><small>Bolsas activas</small></div>
+        <div class="av-stat"><span>210</span><small>Estágios</small></div>
+        <div class="av-stat"><span>47</span><small>Parceiros</small></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-auth-submit');
+      btn.textContent = 'A verificar...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Entrar';
+        btn.disabled = false;
+        alert('Demo: autenticação não implementada neste protótipo.');
+      }, 1200);
+    }
+    function togglePw() {
+      const pw = document.getElementById('password');
+      pw.type = pw.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>

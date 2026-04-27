@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registar — AEAFR</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <div class="auth-brand">
+      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:8px">
+        <div class="logo-icon">🎓</div>
+        <div class="logo-text">
+          <span class="logo-main">AEAFR</span>
+          <span class="logo-sub">Estudantes Angolanos na Rússia</span>
+        </div>
+      </a>
+      <p class="auth-brand-sub">Junta-te à comunidade</p>
+    </div>
+
+    <div class="auth-card">
+      <h2 class="auth-title">Criar conta gratuita</h2>
+      <p class="auth-sub">Acede a bolsas, estágios e serviços de apoio</p>
+
+      <form class="auth-form" onsubmit="handleRegister(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Nome</label>
+            <input type="text" id="firstName" placeholder="João" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apelido</label>
+            <input type="text" id="lastName" placeholder="Silva" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="o.teu@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="university">Universidade</label>
+          <select id="university" required>
+            <option value="">Selecciona a tua universidade</option>
+            <option>MGTU N.E. Bauman — Moscovo</option>
+            <option>MGU Lomonosov — Moscovo</option>
+            <option>RUDN — Moscovo</option>
+            <option>SPbGU — São Petersburgo</option>
+            <option>KFU — Cazã</option>
+            <option>SPBPU — São Petersburgo</option>
+            <option>UrFU — Ecaterimburgo</option>
+            <option>NSU — Novosibirsk</option>
+            <option>Outra</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="level">Nível Académico</label>
+            <select id="level" required>
+              <option value="">Selecciona</option>
+              <option>Licenciatura</option>
+              <option>Mestrado</option>
+              <option>Doutoramento</option>
+              <option>Pós-Doutoramento</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="year">Ano Curricular</label>
+            <select id="year">
+              <option value="">Selecciona</option>
+              <option>1.º Ano</option>
+              <option>2.º Ano</option>
+              <option>3.º Ano</option>
+              <option>4.º Ano</option>
+              <option>5.º Ano</option>
+              <option>6.º Ano</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Palavra-passe</label>
+          <div class="input-password">
+            <input type="password" id="regPassword" placeholder="Mínimo 8 caracteres" required minlength="8" />
+            <button type="button" class="toggle-pw" onclick="togglePwReg()">👁</button>
+          </div>
+        </div>
+
+        <label class="form-check-label">
+          <input type="checkbox" required />
+          Concordo com os <a href="termos.html" class="form-link">Termos de Uso</a> e a <a href="privacidade.html" class="form-link">Política de Privacidade</a>
+        </label>
+
+        <button type="submit" class="btn-auth-submit">Criar Conta Gratuita</button>
+      </form>
+
+      <div class="auth-alt">
+        <p>Já tens conta? <a href="login.html" class="form-link">Entrar →</a></p>
+      </div>
+    </div>
+
+    <a href="index.html" class="auth-back">← Voltar ao portal</a>
+  </div>
+
+  <div class="auth-visual">
+    <div class="auth-visual-content">
+      <div class="auth-visual-icon">🚀</div>
+      <h3>Começa hoje o teu percurso</h3>
+      <p>Regista-te gratuitamente e acede a centenas de oportunidades exclusivas para estudantes angolanos.</p>
+      <ul class="auth-benefits">
+        <li>✓ Candidatura directa a bolsas e estágios</li>
+        <li>✓ Alertas personalizados de oportunidades</li>
+        <li>✓ Apoio jurídico e consular gratuito</li>
+        <li>✓ Rede de contactos com +1 200 estudantes</li>
+        <li>✓ Acesso a eventos e workshops exclusivos</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleRegister(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-auth-submit');
+      btn.textContent = 'A criar conta...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Criar Conta Gratuita';
+        btn.disabled = false;
+        alert('Demo: registo não implementado neste protótipo.');
+      }, 1400);
+    }
+    function togglePwReg() {
+      const pw = document.getElementById('regPassword');
+      pw.type = pw.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>
