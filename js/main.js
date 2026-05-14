@@ -1,3 +1,9 @@
+/**
+ * Main entry point for AEAFR Portal
+ * This file maintains backward compatibility while modules are available
+ */
+
+// Keep existing vanilla JS for backward compatibility
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
@@ -9,8 +15,8 @@ if (hamburger && mobileNav) {
   });
 }
 
-// Search
-function doSearch() {
+// Search function (also exported for module use)
+window.doSearch = function() {
   const q = document.getElementById('searchKeyword')?.value?.trim();
   const area = document.getElementById('searchArea')?.value;
   const type = document.getElementById('searchType')?.value;
@@ -23,9 +29,10 @@ function doSearch() {
   if (area) p.set('area', area);
   if (type) p.set('tipo', type);
   window.location.href = 'bolsas.html?' + p.toString();
-}
+};
+
 document.getElementById('searchKeyword')?.addEventListener('keydown', e => {
-  if (e.key === 'Enter') doSearch();
+  if (e.key === 'Enter') window.doSearch();
 });
 
 // Hero tag search
@@ -33,7 +40,7 @@ document.querySelectorAll('.hero-tag').forEach(tag => {
   tag.addEventListener('click', e => {
     e.preventDefault();
     const kw = document.getElementById('searchKeyword');
-    if (kw) { kw.value = tag.textContent; doSearch(); }
+    if (kw) { kw.value = tag.textContent; window.doSearch(); }
   });
 });
 
@@ -43,7 +50,7 @@ window.addEventListener('scroll', () => {
   if (backTop) backTop.classList.toggle('visible', window.scrollY > 400);
 }, { passive: true });
 
-// View tabs (list/grid toggle)
+// View tabs
 document.querySelectorAll('.view-tab').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.view-tab').forEach(b => b.classList.remove('active'));
@@ -51,7 +58,7 @@ document.querySelectorAll('.view-tab').forEach(btn => {
   });
 });
 
-// Filter apply button
+// Filter button
 document.querySelector('.btn-filter')?.addEventListener('click', () => {
   const checked = [...document.querySelectorAll('.fcheck input:checked')].map(i => i.parentElement.textContent.trim());
   if (checked.length) alert('Filtros aplicados: ' + checked.slice(0, 3).join(', ') + (checked.length > 3 ? '…' : ''));
@@ -66,7 +73,7 @@ document.querySelectorAll('.pag-btn:not(.pag-next)').forEach(btn => {
   });
 });
 
-// Scroll animations for cards
+// Scroll animations
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
